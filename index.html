@@ -727,7 +727,7 @@
 </nav>
  
 <section id="hero">
-  <div class="hero-eyebrow" id="heroEyebrow">Software Engineer | Mobile Application Developer & Flutter Developer</div>
+  <div class="hero-eyebrow" id="heroEyebrow">Software Engineer | Mobile Application Developer | Flutter Developer</div>
   <div class="hero-title-container">
     <h1 class="hero-title">
       <span class="hero-title-line" id="heroLine1">MUHAMMAD</span>
@@ -769,7 +769,7 @@
   <div class="section-label">About & Tech Stack</div>
   <div class="about-inner">
     <div>
-      <h2 class="about-heading reveal">Code is<br><em>poetry.</em></h2>
+      <h2 class="about-heading reveal">Crafting experiences,<br><em>one widget at a time.</em></h2>
       <p class="about-body reveal">As a dedicated Software Engineering student at Lahore Garrison University, I specialize in Flutter development. I build cross-platform mobile applications that feel native, run flawlessly, and solve real-world problems.</p>
       <p class="about-body reveal">My engineering approach is rooted in robust architecture. I utilize state management solutions like Riverpod and Provider, integrate complex REST APIs, and implement secure local and cloud databases to ensure my apps are scalable and maintainable.</p>
     </div>
@@ -782,7 +782,7 @@
         <div class="skill-item"><i class="devicon-github-original"></i> Version Control</div>
         <div class="skill-item"><i class="devicon-google-plain"></i> Riverpod & Provider</div>
         <div class="skill-item"><i class="devicon-react-original"></i> State Management</div>
-        <div class="skill-item"><i class="devicon-azuresqldatabase-plain"></i> Clean Architecture</div>
+        <div class="skill-item"><i class="devicon-vscode-plain"></i> VS Code</div>
         <div class="skill-item"><i class="devicon-chrome-plain"></i> Navigation</div>
         <div class="skill-item"><i class="devicon-android-plain"></i> Mobile Architecture</div>
       </div>
@@ -825,7 +825,7 @@
         <div class="work-name">Visiting  Card Scanner Application</div>
         <div class="work-desc">Digital wallet and virtual business card manager allowing users to store, exchange, and organize contact details efficiently.</div>
         <div class="work-links">
-          <a href="#" class="github-btn"><i class="devicon-github-original"></i> Source Code</a>
+          <a href="https://github.com/Monam1083/Visiting-Card-Scanner-Flutter-Application" class="github-btn"><i class="devicon-github-original"></i> Source Code</a>
         </div>
       </div>
     </div>
@@ -939,24 +939,23 @@
         <div class="contact-links-stack">
           <a href="mailto:monammajeed1083@gmail.com" class="contact-method"><i class="devicon-google-plain"></i> monammajeed1083@gmail.com</a>
           <a href="tel:03197211678" class="contact-method"><i class="devicon-android-plain"></i> +92 319 7211678</a>
-          <a href="https://github.com" target="_blank" class="contact-method"><i class="devicon-github-original"></i> GitHub</a>
-          <a href="https://linkedin.com" target="_blank" class="contact-method"><i class="devicon-linkedin-plain"></i> LinkedIn</a>
+          <a href="https://github.com/Monam1083" target="_blank" class="contact-method"><i class="devicon-github-original"></i> GitHub</a>
+          <a href="https://www.linkedin.com/in/muhammad-monam-majeed-b33b07379/" target="_blank" class="contact-method"><i class="devicon-linkedin-plain"></i> LinkedIn</a>
         </div>
       </div>
       
-      <form class="project-form" onsubmit="event.preventDefault(); alert('Message feature ready to connect to a backend!');">
+      <form id="contactForm" class="project-form">
         <div class="form-group">
-          <input type="text" placeholder="Your Name" required class="cursor-hover-target">
+          <input type="text" id="name" name="name" placeholder="Your Name" required class="cursor-hover-target">
         </div>
         <div class="form-group">
-          <input type="email" placeholder="Your Email" required class="cursor-hover-target">
+          <input type="email" id="email" name="email" placeholder="Your Email" required class="cursor-hover-target">
         </div>
         <div class="form-group">
-          <textarea placeholder="Project Details / Message" required class="cursor-hover-target"></textarea>
+          <textarea id="message" name="message" placeholder="Project Details / Message" required class="cursor-hover-target"></textarea>
         </div>
-        <button type="submit" class="submit-btn cursor-hover-target">Send Request</button>
+        <button type="submit" id="submitBtn" class="submit-btn cursor-hover-target">Send Request</button>
       </form>
-    </div>
   </div>
 </section>
  
@@ -1046,6 +1045,50 @@
   }, { threshold: 0.15 });
   reveals.forEach(el => observer.observe(el));
  
+// FORM SUBMISSION LOGIC
+const contactForm = document.getElementById('contactForm');
+  const submitBtn = document.getElementById('submitBtn');
+
+  contactForm.addEventListener('submit', async function(event) {
+    event.preventDefault(); // Prevents the page from reloading
+
+    // Change button text to show it's working
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending...';
+    
+    // Gather the data from the form
+    const formData = new FormData(contactForm);
+
+    try {
+      // REPLACE THE URL BELOW WITH YOUR ACTUAL FORMSPREE URL
+      const response = await fetch("https://formspree.io/f/YOUR_FORM_ID_HERE", {
+        method: "POST",
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        // Success!
+        submitBtn.textContent = 'Message Sent!';
+        submitBtn.style.background = '#4CAF50'; // Turns green
+        contactForm.reset(); // Clears the inputs
+        
+        // Reset button after 3 seconds
+        setTimeout(() => { 
+          submitBtn.textContent = originalText; 
+          submitBtn.style.background = 'var(--red)'; 
+        }, 3000);
+      } else {
+        submitBtn.textContent = 'Error. Try Again.';
+      }
+    } catch (error) {
+      submitBtn.textContent = 'Error. Try Again.';
+    }
+  });
+
+
 </script>
 </body>
 </html>
