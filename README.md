@@ -4,7 +4,8 @@
 
 🌐 **Live Website:** [https://monam.tech/](https://monam.tech/)
 
-![Portfolio Preview](https://monam.tech/monam.jpeg) ## 👨‍💻 About Me
+![Portfolio Preview](https://monam.tech/monam.jpeg) 
+## 👨‍💻 About Me
 
 I am a Software Engineering student at Lahore Garrison University and an enthusiastic **Flutter Developer based in Lahore, Pakistan**. I specialize in crafting pixel-perfect, highly performant, and scalable cross-platform mobile applications. I am actively expanding my backend expertise by integrating the MERN stack into my architecture to build complete full-stack solutions.
 
@@ -28,10 +29,3 @@ This portfolio is built with pure HTML, CSS, and Vanilla JavaScript, prioritizin
 * **Formspree** - Backend form submission handling.
 * **DevIcons** - Scalable SVG technology icons.
 
-## 🚀 Running Locally
-
-If you'd like to clone and run this portfolio locally:
-
-1. Clone the repository:
-   ```bash
-   git clone [https://github.com/Monam1083/portfolio-website.git](https://github.com/Monam1083/portfolio-website.git)
