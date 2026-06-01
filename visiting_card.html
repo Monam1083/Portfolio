@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visiting Card | M. Monam Majeed</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --black: #080808;
+      --card-bg: #0f0f0f;
+      --white: #f0ece4;
+      --red: #ff2d20;
+      --gold: #c9a84c;
+      --muted: #888070;
+    }
+
+    body {
+      background: #1a1a1a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Space Mono', monospace;
+      gap: 40px;
+    }
+
+    /* Standard Business Card Size: 3.5in x 2in (Scaled up for web viewing) */
+    .card {
+      width: 600px;
+      height: 343px;
+      background: var(--card-bg);
+      border: 1px solid rgba(240,236,228,0.1);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+    }
+
+    /* Background styling matching your website */
+    .card::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: 
+        linear-gradient(rgba(240,236,228,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(240,236,228,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Red ambient glow */
+    .orb {
+      position: absolute;
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, var(--red), transparent 70%);
+      filter: blur(80px);
+      opacity: 0.15;
+      top: -100px; right: -100px;
+      z-index: 0;
+    }
+
+    .card-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      padding: 40px;
+      display: flex;
+    }
+
+    /* --- FRONT OF CARD --- */
+    .front {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .front .logo-text {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 56px;
+      letter-spacing: 0.15em;
+      color: var(--white);
+      margin: 0;
+      line-height: 1;
+    }
+
+    .front .logo-text span {
+      color: var(--red);
+    }
+
+    .front .title {
+      font-size: 14px;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 16px;
+    }
+
+    /* --- BACK OF CARD --- */
+    .back {
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .back-header .name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 32px;
+      letter-spacing: 0.1em;
+      color: var(--white);
+      margin: 0;
+    }
+
+    .back-header .role {
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-top: 4px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+    }
+
+    .contact-item i {
+      color: var(--white);
+      font-size: 16px;
+      width: 20px;
+      text-align: center;
+    }
+
+    .contact-item strong {
+      color: var(--white);
+      font-weight: 400;
+    }
+
+    /* QR Code Placeholder */
+    .qr-code {
+      position: absolute;
+      bottom: 40px;
+      right: 40px;
+      width: 80px;
+      height: 80px;
+      background: var(--white);
+      padding: 4px;
+      border-radius: 4px;
+    }
+    
+    .qr-code img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="orb"></div>
+    <div class="card-content front">
+      <div>
+        <h1 class="logo-text">M<span>.</span>MONAM Majeed</h1>
+        <div class="title">Software Engineer</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="orb" style="top: auto; bottom: -100px; left: -100px; background: radial-gradient(circle, #1a3a6a, transparent 70%);"></div>
+    <div class="card-content back">
+      
+      <div class="back-header">
+        <h2 class="name">MUHAMMAD MONAM MAJEED</h2>
+        <div class="role">Flutter & Mobile App Developer</div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <span><strong>+92 319 7211678</strong></span>
+        </div>
+        <div class="contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <span><strong>monammajeed1083@gmail.com</strong></span>
+        </div>
+        <div class="contact-item">
+          <i class="fa-solid fa-globe"></i>
+          <span><strong>monam.tech</strong></span>
+        </div>
+        <div class="contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Lahore, Pakistan</span>
+        </div>
+      </div>
+      
+      <div class="qr-code">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://monam.tech" alt="QR Code to monam.tech">
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
