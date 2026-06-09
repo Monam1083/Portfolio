@@ -4,23 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Muhammad Monam Majeed | Flutter Developer in Lahore, Pakistan</title>
-  <meta name="title" content="Muhammad Monam Majeed | Flutter Developer in Lahore, Pakistan">
-  <meta name="description" content="Portfolio of Muhammad Monam Majeed, a Software Engineering student and expert Flutter Developer based in Lahore, Pakistan. Specializing in cross-platform mobile apps, Firebase, and the MERN stack.">
-  <meta name="keywords" content="Flutter Developer Lahore, Mobile App Developer Pakistan, Muhammad Monam Majeed, Software Engineer Lahore, Flutter, Dart, Firebase, MERN Stack, Cross-platform Developer">
+  <title>Muhammad Monam Majeed | Expert Flutter Developer in Lahore, Pakistan</title>
+  <meta name="title" content="Muhammad Monam Majeed | Expert Flutter Developer in Lahore, Pakistan">
+  <meta name="description" content="Portfolio of Muhammad Monam Majeed, a top-tier Software Engineering student and expert Flutter Developer based in Lahore, Pakistan. Hire for cross-platform mobile apps, Firebase, and MERN stack projects.">
+  <meta name="keywords" content="Flutter Developer Lahore, Hire Mobile App Developer Pakistan, Muhammad Monam Majeed, Best Software Engineer Lahore, Flutter, Dart, Firebase, MERN Stack, Cross-platform App Developer, iOS Android Developer">
   <meta name="author" content="Muhammad Monam Majeed">
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://monam.tech/">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://monam.tech/">
-  <meta property="og:title" content="Muhammad Monam Majeed | Flutter Developer Lahore">
-  <meta property="og:description" content="Explore the portfolio of Muhammad Monam Majeed, a passionate Software Engineer and mobile app developer crafting scalable Flutter applications.">
+  <meta property="og:title" content="Muhammad Monam Majeed | Expert Flutter Developer Lahore">
+  <meta property="og:description" content="Explore the portfolio of Muhammad Monam Majeed, a passionate Software Engineer and mobile app developer crafting highly scalable, pixel-perfect Flutter applications.">
   <meta property="og:image" content="https://monam.tech/monam.jpeg">
 
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://monam.tech/">
-  <meta property="twitter:title" content="Muhammad Monam Majeed | Flutter Developer Lahore">
-  <meta property="twitter:description" content="Explore the portfolio of Muhammad Monam Majeed, a passionate Software Engineer and mobile app developer crafting scalable Flutter applications.">
+  <meta property="twitter:title" content="Muhammad Monam Majeed | Expert Flutter Developer Lahore">
+  <meta property="twitter:description" content="Explore the portfolio of Muhammad Monam Majeed, a passionate Software Engineer and mobile app developer crafting highly scalable, pixel-perfect Flutter applications.">
   <meta property="twitter:image" content="https://monam.tech/monam.jpeg">
 
   <script type="application/ld+json">
@@ -28,9 +29,11 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Muhammad Monam Majeed",
-    "jobTitle": "Flutter Developer",
+    "jobTitle": "Flutter Developer & Software Engineer",
     "url": "https://monam.tech/",
     "image": "https://monam.tech/monam.jpeg",
+    "description": "Expert Flutter Developer crafting high-performance cross-platform mobile applications in Lahore, Pakistan.",
+    "knowsAbout": ["Flutter", "Dart", "Mobile Application Development", "Firebase", "State Management", "MERN Stack"],
     "alumniOf": {
       "@type": "CollegeOrUniversity",
       "name": "Lahore Garrison University"
@@ -51,6 +54,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <style>
     :root {
@@ -61,6 +65,7 @@
       --gold: #c9a84c;
       --muted: #888070;
       --grid: rgba(240,236,228,0.04);
+      --whatsapp: #25D366;
     }
     
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -276,6 +281,7 @@
     }
     .hero-socials a i { font-size: 20px; }
     .hero-socials a:hover { color: var(--white); }
+    .hero-socials a:hover .fa-whatsapp { color: var(--whatsapp); }
 
     .hero-subtitle {
       position: relative;
@@ -464,7 +470,13 @@
     }
     .work-item:hover .work-desc { opacity: 1; transform: translateY(0); }
     
-    .work-links { opacity: 1; transform: translateY(0); }
+    .work-links { 
+      opacity: 1; 
+      transform: translateY(0);
+      display: flex; 
+      gap: 12px;
+      flex-wrap: wrap;
+    }
     
     .work-thumb--svg {
       width: 100%; height: 380px;
@@ -477,7 +489,7 @@
     .work-item:hover .work-thumb--svg { filter: brightness(1); }
     .work-thumb--svg svg { display: block; width: 100%; height: 100%; }
 
-    .github-btn {
+    .github-btn, .demo-btn {
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -488,9 +500,20 @@
       text-decoration: none;
       border: 1px solid rgba(240,236,228,0.2);
       padding: 8px 16px;
-      transition: background 0.3s, border-color 0.3s;
+      transition: background 0.3s, border-color 0.3s, color 0.3s;
     }
     .github-btn:hover { background: rgba(255,45,32,0.1); border-color: var(--red); }
+    
+    .demo-btn {
+      color: var(--black);
+      background: var(--white);
+      border: 1px solid var(--white);
+    }
+    .demo-btn:hover {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--black);
+    }
     
     #resume { border-top: 1px solid rgba(240,236,228,0.06); background: #0c0c0c; }
     .timeline-list { display: flex; flex-direction: column; margin-bottom: 80px; }
@@ -617,8 +640,12 @@
       transition: color 0.3s;
       display: flex; align-items: center; gap: 16px;
     }
-    .contact-method i { color: var(--red); font-size: 24px; }
+    
+    /* WhatsApp icon specialized coloring */
+    .contact-method i { color: var(--red); font-size: 24px; transition: color 0.3s; }
     .contact-method:hover { color: var(--red); }
+    .contact-method.wa-link:hover i, .contact-method.wa-link i { color: var(--whatsapp); }
+
     .project-form { display: flex; flex-direction: column; gap: 20px; }
     .form-group input, .form-group textarea {
       width: 100%;
@@ -699,6 +726,31 @@
       to { transform: translate(40px, 40px) rotate(15deg); }
     }
     
+    /* Floating WhatsApp Button */
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+      background-color: var(--whatsapp);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 32px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+      z-index: 8000;
+      text-decoration: none;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    .floating-whatsapp:hover {
+      transform: scale(1.1);
+      background-color: #1ebe57;
+      color: white;
+    }
+
     @media (max-width: 768px) {
       nav { padding: 20px 24px; }
       .nav-links { display: none; }
@@ -714,6 +766,7 @@
       .timeline-item { grid-template-columns: 1fr; gap: 16px; }
       .contact-grid { grid-template-columns: 1fr; gap: 40px; }
       footer { flex-direction: column; gap: 16px; text-align: center; }
+      .floating-whatsapp { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 26px; }
     }
   </style>
 </head>
@@ -736,6 +789,10 @@
   <div class="loader-text">Compiling Application</div>
 </div>
   
+<a href="https://wa.me/923197211678" class="floating-whatsapp cursor-hover-target" target="_blank" aria-label="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
 <nav id="mainNav">
   <a class="nav-logo" href="#">M<span>.</span>MONAM Majeed</a>
   <ul class="nav-links">
@@ -754,10 +811,11 @@
       <span class="hero-title-line red" id="heroLine2">MONAM</span>
       <span class="hero-title-line" id="heroLine3">MAJEED</span>
     </h1>
-    <img src="monam.jpeg" class="hero-profile-pic" id="heroProfilePic" alt="Muhammad Monam Majeed - Flutter Developer in Lahore Pakistan">
+    <img src="monam.jpeg" class="hero-profile-pic" id="heroProfilePic" alt="Muhammad Monam Majeed - Expert Flutter Developer in Lahore Pakistan">
   </div>
   <div class="hero-socials" id="heroSocials">
     <a href="https://github.com/Monam1083" target="_blank" class="cursor-hover-target"><i class="devicon-github-original"></i> GitHub</a>
+    <a href="https://wa.me/923197211678" target="_blank" class="cursor-hover-target"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
     <a href="https://www.linkedin.com/in/muhammad-monam-majeed-b33b07379/" target="_blank" class="cursor-hover-target"><i class="devicon-linkedin-plain"></i> LinkedIn</a>
     <a href="https://www.facebook.com/share/1EWy4ZLH4v/" target="_blank" class="cursor-hover-target"><i class="devicon-facebook-plain"></i> Facebook</a>
   </div>
@@ -819,6 +877,7 @@
         <div class="work-desc">Digital wallet and virtual business card manager allowing users to store, exchange, and organize contact details efficiently.</div>
         <div class="work-links">
           <a href="https://github.com/Monam1083/Visiting-Card-Scanner-Flutter-Application" class="github-btn"><i class="devicon-github-original"></i> Source Code</a>
+          <a href="https://drive.google.com/file/d/15JoeCV5pcJnQLkekvLFf0uqS20H9YNqh/view?usp=drive_link" target="_blank" class="demo-btn"><i class="fa-solid fa-play"></i> Live Demo</a>
         </div>
       </div>
     </div>
@@ -831,6 +890,7 @@
         <div class="work-desc">Location-based weather forecasting app delivering accurate real-time data, hourly forecasts, and beautiful animated weather conditions.</div>
         <div class="work-links">
           <a href="https://github.com/Monam1083/Weather-Mobile-Application" class="github-btn"><i class="devicon-github-original"></i> Source Code</a>
+          <a href="https://drive.google.com/file/d/1vh6xklfpkWu5BOph2eMyF3eo-M7ttn-7/view?usp=sharing" target="_blank" class="demo-btn"><i class="fa-solid fa-play"></i> Live Demo</a>
         </div>
       </div>
     </div>
@@ -843,6 +903,7 @@
         <div class="work-desc">A cinematic discovery app fetching data from TMDB. Features search, trailers, cast info, and watchlist saving via local storage.</div>
         <div class="work-links">
           <a href="https://github.com/Monam1083/Movie-Application" class="github-btn"><i class="devicon-github-original"></i> Source Code</a>
+          <a href="#" class="demo-btn"><i class="fa-solid fa-play"></i> Live Demo</a>
         </div>
       </div>
     </div>
@@ -943,6 +1004,7 @@
         <div class="work-desc">Translate across 30+ languages with real-time voice input, text-to-speech playback, offline history, favorites, and full dark mode — built on Material 3.</div>
         <div class="work-links">
           <a href="https://github.com/Monam1083/Language-Translator-Application" class="github-btn"><i class="devicon-github-original"></i> Source Code</a>
+          <a href="#" class="demo-btn"><i class="fa-solid fa-play"></i> Live Demo</a>
         </div>
       </div>
     </div>
@@ -1028,7 +1090,9 @@
         <div class="contact-links-stack">
           <a href="mailto:monammajeed1083@gmail.com" class="contact-method"><i class="devicon-google-plain"></i> monammajeed1083@gmail.com</a>
           <a href="tel:03197211678" class="contact-method"><i class="devicon-android-plain"></i> +92 319 7211678</a>
+          
           <a href="https://github.com/Monam1083" target="_blank" class="contact-method"><i class="devicon-github-original"></i> GitHub</a>
+          <a href="https://wa.me/923197211678" target="_blank" class="contact-method wa-link"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
           <a href="https://www.linkedin.com/in/muhammad-monam-majeed-b33b07379/" target="_blank" class="contact-method"><i class="devicon-linkedin-plain"></i> LinkedIn</a>
         </div>
       </div>
