@@ -24,34 +24,6 @@
   <meta property="twitter:description" content="Explore the portfolio of Muhammad Monam Majeed, a passionate Software Engineer and mobile app developer crafting highly scalable, pixel-perfect Flutter applications.">
   <meta property="twitter:image" content="https://monam.tech/monam.jpeg">
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Muhammad Monam Majeed",
-    "jobTitle": "Flutter Developer & Software Engineer",
-    "url": "https://monam.tech/",
-    "image": "https://monam.tech/monam.jpeg",
-    "description": "Expert Flutter Developer crafting high-performance cross-platform mobile applications in Lahore, Pakistan.",
-    "knowsAbout": ["Flutter", "Dart", "Mobile Application Development", "Firebase", "State Management", "MERN Stack"],
-    "alumniOf": {
-      "@type": "CollegeOrUniversity",
-      "name": "Lahore Garrison University"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Lahore",
-      "addressRegion": "Punjab",
-      "addressCountry": "Pakistan"
-    },
-    "sameAs": [
-      "https://www.linkedin.com/in/muhammad-monam-majeed-b33b07379/",
-      "https://github.com/Monam1083",
-      "https://www.facebook.com/share/1EWy4ZLH4v/"
-    ]
-  }
-  </script>
-
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -61,7 +33,7 @@
       --black: #080808;
       --white: #f0ece4;
       --cream: #e8e0d0;
-      --red: #ff2d20;
+      --green: #10B981; /* Changed from red to mint green globally */
       --gold: #c9a84c;
       --muted: #888070;
       --grid: rgba(240,236,228,0.04);
@@ -86,7 +58,7 @@
     }
     .cursor-dot {
       width: 8px; height: 8px;
-      background: var(--red);
+      background: var(--green);
       border-radius: 50%;
       transform: translate(-50%, -50%);
       transition: transform 0.1s ease;
@@ -103,7 +75,7 @@
     }
     .cursor-ring.hovered {
       width: 64px; height: 64px;
-      border-color: var(--red);
+      border-color: var(--green);
     }
     
     body::before {
@@ -149,7 +121,7 @@
     }
     .loader-bar {
       height: 100%;
-      background: var(--red);
+      background: var(--green);
       width: 0%;
       transition: width 0.05s linear;
     }
@@ -178,7 +150,7 @@
       color: var(--white);
       text-decoration: none;
     }
-    .nav-logo span { color: var(--red); }
+    .nav-logo span { color: var(--green); }
     .nav-links { display: flex; gap: 40px; list-style: none; }
     .nav-links a {
       font-size: 11px;
@@ -193,7 +165,7 @@
       content: '';
       position: absolute; bottom: -4px; left: 0;
       width: 0; height: 1px;
-      background: var(--red);
+      background: var(--green);
       transition: width 0.3s ease;
     }
     .nav-links a:hover { color: var(--white); }
@@ -215,7 +187,7 @@
       font-size: 11px;
       letter-spacing: 0.4em;
       text-transform: uppercase;
-      color: var(--red);
+      color: var(--green);
       margin-bottom: 32px;
       opacity: 0;
       transform: translateX(-30px);
@@ -246,7 +218,7 @@
       transition: transform 0.9s cubic-bezier(0.16,1,0.3,1);
     }
     .hero-title-line.slide-up { transform: translateY(0); }
-    .hero-title-line.red { color: var(--red); }
+    .hero-title-line.green { color: var(--green); }
     
     .hero-profile-pic {
       width: clamp(250px, 30vw, 400px);
@@ -321,7 +293,7 @@
       padding: 0 48px;
       white-space: nowrap;
     }
-    .marquee-item span { color: var(--red); margin: 0 8px; }
+    .marquee-item span { color: var(--green); margin: 0 8px; }
     @keyframes marquee {
       from { transform: translateX(0); }
       to { transform: translateX(-50%); }
@@ -336,7 +308,7 @@
       font-size: 11px;
       letter-spacing: 0.4em;
       text-transform: uppercase;
-      color: var(--red);
+      color: var(--green);
       margin-bottom: 64px;
       display: flex;
       align-items: center;
@@ -346,7 +318,7 @@
       content: '';
       display: block;
       width: 40px; height: 1px;
-      background: var(--red);
+      background: var(--green);
     }
     
     #about {
@@ -400,13 +372,13 @@
       content: '';
       position: absolute; left: 0; top: 0; bottom: 0;
       width: 2px;
-      background: var(--red);
+      background: var(--green);
       transform: scaleY(0);
       transition: transform 0.3s ease;
     }
-    .skill-item:hover { background: rgba(255,45,32,0.06); color: var(--white); border-color: rgba(255,45,32,0.2); }
+    .skill-item:hover { background: rgba(16, 185, 129, 0.06); color: var(--white); border-color: rgba(16, 185, 129, 0.2); }
     .skill-item:hover::before { transform: scaleY(1); }
-    .skill-item:hover i { color: var(--red); }
+    .skill-item:hover i { color: var(--green); }
 
     #work { background: var(--black); }
     
@@ -446,7 +418,7 @@
       font-size: 10px;
       letter-spacing: 0.35em;
       text-transform: uppercase;
-      color: var(--red);
+      color: var(--green);
       margin-bottom: 10px;
     }
     .work-name {
@@ -502,7 +474,7 @@
       padding: 8px 16px;
       transition: background 0.3s, border-color 0.3s, color 0.3s;
     }
-    .github-btn:hover { background: rgba(255,45,32,0.1); border-color: var(--red); }
+    .github-btn:hover { background: rgba(16, 185, 129, 0.1); border-color: var(--green); }
     
     .demo-btn {
       color: var(--black);
@@ -516,6 +488,7 @@
     }
     
     #resume { border-top: 1px solid rgba(240,236,228,0.06); background: #0c0c0c; }
+    
     .timeline-list { display: flex; flex-direction: column; margin-bottom: 80px; }
     .timeline-item {
       display: grid;
@@ -537,7 +510,7 @@
       line-height: 1;
       transition: color 0.3s;
     }
-    .timeline-item:hover .timeline-year { color: var(--red); }
+    .timeline-item:hover .timeline-year { color: var(--green); }
     .timeline-title {
       font-family: 'DM Serif Display', serif;
       font-size: 28px;
@@ -556,6 +529,76 @@
       color: var(--muted);
       line-height: 1.8;
       max-width: 500px;
+    }
+
+    /* ---- New Education Card Layout Styles ---- */
+    .card-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 80px;
+    }
+
+    .timeline-card {
+      background-color: #1E1E1E; 
+      border: 1px solid #333; 
+      border-radius: 12px;
+      padding: 25px;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+      cursor: none;
+    }
+
+    .timeline-card:hover {
+      border-color: var(--green); 
+      transform: translateY(-2px);
+    }
+
+    .icon-box {
+      background-color: rgba(16, 185, 129, 0.1); 
+      color: var(--green); 
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      border: 1px solid rgba(16, 185, 129, 0.2); 
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .card-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .card-content h3 {
+      color: var(--white);
+      margin: 0 0 5px 0;
+      font-family: 'DM Serif Display', serif;
+      font-size: 24px;
+    }
+
+    .institution {
+      color: var(--muted); 
+      margin: 0 0 15px 0;
+      font-family: 'Space Mono', monospace;
+      font-size: 13px;
+    }
+
+    .date-pill {
+      background-color: rgba(16, 185, 129, 0.1); 
+      color: var(--green); 
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: 'Space Mono', monospace;
+      border: 1px solid rgba(16, 185, 129, 0.2); 
     }
 
     .certifications-grid {
@@ -641,9 +684,8 @@
       display: flex; align-items: center; gap: 16px;
     }
     
-    /* WhatsApp icon specialized coloring */
-    .contact-method i { color: var(--red); font-size: 24px; transition: color 0.3s; }
-    .contact-method:hover { color: var(--red); }
+    .contact-method i { color: var(--green); font-size: 24px; transition: color 0.3s; }
+    .contact-method:hover { color: var(--green); }
     .contact-method.wa-link:hover i, .contact-method.wa-link i { color: var(--whatsapp); }
 
     .project-form { display: flex; flex-direction: column; gap: 20px; }
@@ -658,9 +700,9 @@
       transition: border-color 0.3s;
     }
     .form-group textarea { resize: vertical; min-height: 120px; }
-    .form-group input:focus, .form-group textarea:focus { border-color: var(--red); outline: none; }
+    .form-group input:focus, .form-group textarea:focus { border-color: var(--green); outline: none; }
     .submit-btn {
-      background: var(--red);
+      background: var(--green);
       color: var(--white);
       border: none;
       padding: 16px;
@@ -670,7 +712,7 @@
       cursor: pointer;
       transition: background 0.3s;
     }
-    .submit-btn:hover { background: #d01c10; }
+    .submit-btn:hover { background: #0e9f6e; }
     
     footer {
       position: relative; z-index: 1;
@@ -711,7 +753,7 @@
     }
     .orb1 {
       width: 600px; height: 600px;
-      background: radial-gradient(circle, var(--red), transparent 70%);
+      background: radial-gradient(circle, var(--green), transparent 70%);
       top: -200px; right: -200px;
       animation-duration: 18s;
     }
@@ -808,7 +850,7 @@
   <div class="hero-title-container">
     <h1 class="hero-title">
       <span class="hero-title-line" id="heroLine1">MUHAMMAD</span>
-      <span class="hero-title-line red" id="heroLine2">MONAM</span>
+      <span class="hero-title-line green" id="heroLine2">MONAM</span>
       <span class="hero-title-line" id="heroLine3">MAJEED</span>
     </h1>
     <img src="monam.jpeg" class="hero-profile-pic" id="heroProfilePic" alt="Muhammad Monam Majeed - Expert Flutter Developer in Lahore Pakistan">
@@ -850,16 +892,16 @@
     </div>
     <div>
       <div class="skills-list reveal">
-        <div class="skill-item"><i class="devicon-dart-plain"></i> Dart</div>
-        <div class="skill-item"><i class="devicon-flutter-plain"></i> Flutter</div>
-        <div class="skill-item"><i class="devicon-firebase-plain"></i> Firebase</div>
-        <div class="skill-item"><i class="devicon-sqlite-plain"></i> Sqflite</div>
-        <div class="skill-item"><i class="devicon-github-original"></i> Version Control</div>
-        <div class="skill-item"><i class="devicon-google-plain"></i> Riverpod & Provider</div>
-        <div class="skill-item"><i class="devicon-react-original"></i> State Management</div>
-        <div class="skill-item"><i class="devicon-vscode-plain"></i> VS Code</div>
-        <div class="skill-item"><i class="devicon-chrome-plain"></i> Navigation</div>
-        <div class="skill-item"><i class="devicon-android-plain"></i> Mobile Architecture</div>
+        <div class="skill-item cursor-hover-target"><i class="devicon-dart-plain"></i> Dart</div>
+        <div class="skill-item cursor-hover-target"><i class="devicon-flutter-plain"></i> Flutter</div>
+        <div class="skill-item cursor-hover-target"><i class="devicon-firebase-plain"></i> Firebase</div>
+        <div class="skill-item cursor-hover-target"><i class="devicon-sqlite-plain"></i> Sqflite</div>
+        <div class="skill-item cursor-hover-target"><i class="devicon-github-original"></i> Version Control</div>
+        <div class="skill-item cursor-hover-target"><i class="devicon-google-plain"></i> Riverpod & Provider</div>
+        <div class="skill-item cursor-hover-target"><i class="devicon-react-original"></i> State Management</div>
+        <div class="skill-item cursor-hover-target"><i class="devicon-vscode-plain"></i> VS Code</div>
+        <div class="skill-item cursor-hover-target"><i class="devicon-chrome-plain"></i> Navigation</div>
+        <div class="skill-item cursor-hover-target"><i class="devicon-android-plain"></i> Mobile Architecture</div>
       </div>
     </div>
   </div>
@@ -869,7 +911,7 @@
   <div class="section-label">Featured Projects</div>
   <div class="work-grid">
     
-    <div class="work-item reveal">
+    <div class="work-item reveal cursor-hover-target">
       <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=800&q=80" alt="Virtual Card App" class="work-thumb">
       <div class="work-overlay">
         <div class="work-category">Flutter + Sqflite + Provider</div>
@@ -882,7 +924,7 @@
       </div>
     </div>
 
-    <div class="work-item reveal">
+    <div class="work-item reveal cursor-hover-target">
       <img src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?auto=format&fit=crop&w=800&q=80" alt="Weather App" class="work-thumb">
       <div class="work-overlay">
         <div class="work-category">Flutter + REST API (OpenWeather)</div>
@@ -895,7 +937,7 @@
       </div>
     </div>
 
-    <div class="work-item reveal">
+    <div class="work-item reveal cursor-hover-target">
       <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80" alt="Chat Application" class="work-thumb">
       <div class="work-overlay">
         <div class="work-category">Flutter + TMDB API + Riverpod</div>
@@ -908,7 +950,7 @@
       </div>
     </div>
 
-    <div class="work-item reveal">
+    <div class="work-item reveal cursor-hover-target">
       <div class="work-thumb work-thumb--svg">
         <svg width="100%" height="100%" viewBox="0 0 800 380" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
           <rect width="800" height="380" fill="#0d0d1a"/>
@@ -1015,7 +1057,7 @@
 <section id="resume">
   <div class="section-label">Experience</div>
   <div class="timeline-list">
-    <div class="timeline-item reveal">
+    <div class="timeline-item reveal cursor-hover-target">
       <div class="timeline-year">1 October to 30 October 2025</div>
       <div>
         <div class="timeline-title">Flutter Developer Intern</div>
@@ -1026,52 +1068,60 @@
   </div>
 
   <div class="section-label" style="margin-top: 60px;">Education</div>
-  <div class="timeline-list">
-    <div class="timeline-item reveal">
-      <div class="timeline-year">2023–2027</div>
-      <div>
-        <div class="timeline-title">BS Software Engineering</div>
-        <div class="timeline-inst">Lahore Garrison University</div>
-        <div class="timeline-desc">Currently in 6th semester. Focused on advanced programming, software architecture, databases, and mobile application development.</div>
+  
+  <div class="card-container">
+    <div class="timeline-card reveal cursor-hover-target">
+      <div class="icon-box">
+        <i class="fas fa-graduation-cap"></i>
+      </div>
+      <div class="card-content">
+        <h3>BS Software Engineering</h3>
+        <p class="institution">Lahore Garrison University</p>
+        <span class="date-pill">2023 – 2027</span>
       </div>
     </div>
-    <div class="timeline-item reveal">
-      <div class="timeline-year">2021–2023</div>
-      <div>
-        <div class="timeline-title">Intermediate (ICS)</div>
-        <div class="timeline-inst">Punjab College Chishtian</div>
-        <div class="timeline-desc">Studied Information and Computer Science with core subjects in Mathematics, Physics, and Computer Science.</div>
+
+    <div class="timeline-card reveal cursor-hover-target">
+      <div class="icon-box">
+        <i class="fas fa-building"></i>
+      </div>
+      <div class="card-content">
+        <h3>Intermediate (ICS)</h3>
+        <p class="institution">Punjab College Chishtian</p>
+        <span class="date-pill">2021 – 2023</span>
       </div>
     </div>
-    <div class="timeline-item reveal">
-      <div class="timeline-year">2019–2021</div>
-      <div>
-        <div class="timeline-title">Matriculation</div>
-        <div class="timeline-inst">The Educator School</div>
-        <div class="timeline-desc">Graduated with a strong foundation in Computer science and mathematics.</div>
+    
+    <div class="timeline-card reveal cursor-hover-target">
+      <div class="icon-box">
+        <i class="fas fa-school"></i>
+      </div>
+      <div class="card-content">
+        <h3>Matriculation (Science)</h3>
+        <p class="institution">The Educators School</p>
+        <span class="date-pill">2019 – 2021</span>
       </div>
     </div>
   </div>
-
   <div class="section-label" style="margin-top: 60px;">Certifications</div>
   <div class="certifications-grid">
-    <div class="cert-box reveal-slide">
+    <div class="cert-box reveal-slide cursor-hover-target">
       <img src="IBM.png" alt="Certificate 1">
       <div class="cert-name">Developing Mobile App with Flutter</div>
     </div>
-    <div class="cert-box reveal-slide">
+    <div class="cert-box reveal-slide cursor-hover-target">
       <img src="university OF Michigan.png" alt="Certificate 2">
       <div class="cert-name">Python Programming Language</div>
     </div>
-    <div class="cert-box reveal-slide">
+    <div class="cert-box reveal-slide cursor-hover-target">
       <img src="udemy.png" alt="Certificate 3">
       <div class="cert-name">Build Mobile Apps with Flutter Like a Pro</div>
     </div>
-    <div class="cert-box reveal-slide">
+    <div class="cert-box reveal-slide cursor-hover-target">
       <img src="google Cloud.png" alt="Certificate 4">
       <div class="cert-name">Flutter</div>
     </div>
-    <div class="cert-box reveal-slide">
+    <div class="cert-box reveal-slide cursor-hover-target">
       <img src="github.png" alt="Certificate 5">
       <div class="cert-name">GitHub Essentials</div>
     </div>
@@ -1088,10 +1138,10 @@
           <p>Whether you need a full-scale mobile application from scratch, API integrations, or bug fixes for your existing Flutter codebase, I am ready to turn your ideas into functional realities.</p>
         </div>
         <div class="contact-links-stack">
-          <a href="mailto:monammajeed1083@gmail.com" class="contact-method"><i class="devicon-google-plain"></i> monammajeed1083@gmail.com</a>
-          <a href="https://github.com/Monam1083" target="_blank" class="contact-method"><i class="devicon-github-original"></i> GitHub</a>
-          <a href="https://wa.me/923197211678" target="_blank" class="contact-method wa-link"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-          <a href="https://www.linkedin.com/in/muhammad-monam-majeed-b33b07379/" target="_blank" class="contact-method"><i class="devicon-linkedin-plain"></i> LinkedIn</a>
+          <a href="mailto:monammajeed1083@gmail.com" class="contact-method cursor-hover-target"><i class="devicon-google-plain"></i> monammajeed1083@gmail.com</a>
+          <a href="https://github.com/Monam1083" target="_blank" class="contact-method cursor-hover-target"><i class="devicon-github-original"></i> GitHub</a>
+          <a href="https://wa.me/923197211678" target="_blank" class="contact-method wa-link cursor-hover-target"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          <a href="https://www.linkedin.com/in/muhammad-monam-majeed-b33b07379/" target="_blank" class="contact-method cursor-hover-target"><i class="devicon-linkedin-plain"></i> LinkedIn</a>
         </div>
       </div>
       <form id="contactForm" class="project-form">
@@ -1169,7 +1219,7 @@
   }
   animateCursor();
   
-  document.querySelectorAll('a, button, .work-item, .skill-item, .timeline-item, .cert-box, .cursor-hover-target').forEach(el => {
+  document.querySelectorAll('a, button, .work-item, .skill-item, .timeline-item, .timeline-card, .cert-box, .cursor-hover-target').forEach(el => {
     el.addEventListener('mouseenter', () => ring.classList.add('hovered'));
     el.addEventListener('mouseleave', () => ring.classList.remove('hovered'));
   });
@@ -1207,7 +1257,7 @@
         contactForm.reset();
         setTimeout(() => { 
           submitBtn.textContent = originalText; 
-          submitBtn.style.background = 'var(--red)'; 
+          submitBtn.style.background = 'var(--green)'; 
         }, 3000);
       } else {
         submitBtn.textContent = 'Error. Try Again.';
