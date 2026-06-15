@@ -604,9 +604,144 @@
     }
     .floating-whatsapp:hover { transform: scale(1.1); background-color: #1ebe57; color: white; }
 
+    /* ── GitHub Stats Section ── */
+    #github-stats {
+      background: #0c0c0c;
+      border-top: 1px solid rgba(240,236,228,0.06);
+    }
+    .github-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-bottom: 48px;
+    }
+    .gh-stat-card {
+      background: rgba(240,236,228,0.03);
+      border: 1px solid rgba(240,236,228,0.06);
+      padding: 32px 28px;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.3s, border-color 0.3s;
+    }
+    .gh-stat-card::before {
+      content: '';
+      position: absolute; left: 0; top: 0; bottom: 0;
+      width: 2px;
+      background: var(--green);
+      transform: scaleY(0);
+      transition: transform 0.3s ease;
+    }
+    .gh-stat-card:hover { background: rgba(16,185,129,0.06); border-color: rgba(16,185,129,0.2); }
+    .gh-stat-card:hover::before { transform: scaleY(1); }
+    .gh-stat-label {
+      font-size: 10px;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    .gh-stat-value {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(40px, 5vw, 72px);
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .gh-stat-value.loading { font-size: 28px; color: var(--muted); animation: gh-pulse 1.5s ease-in-out infinite; }
+    @keyframes gh-pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+    .gh-stat-sub {
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+    }
+    .gh-streak-wrap {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .gh-streak-img {
+      border: 1px solid rgba(240,236,228,0.06);
+      border-radius: 6px;
+      max-width: 100%;
+      height: auto;
+      transition: border-color 0.3s;
+    }
+    .gh-streak-img:hover { border-color: rgba(16,185,129,0.3); }
+    .gh-langs-row {
+      margin-top: 48px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .gh-lang-pill {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--green);
+      border: 1px solid rgba(16,185,129,0.25);
+      background: rgba(16,185,129,0.07);
+      padding: 6px 14px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .gh-lang-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); }
+
+    /* ── Hamburger / Mobile Nav ── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 24px;
+      height: 1px;
+      background: var(--white);
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+    .mobile-nav-drawer {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(8,8,8,0.97);
+      z-index: 99;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+    }
+    .mobile-nav-drawer.open { display: flex; }
+    .mobile-nav-drawer a {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 48px;
+      letter-spacing: 0.15em;
+      color: var(--white);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .mobile-nav-drawer a:hover { color: var(--green); }
+    .mobile-nav-drawer .nav-resume-link {
+      font-size: 24px !important;
+      color: var(--green) !important;
+      border: 1px solid rgba(16,185,129,0.3);
+      padding: 10px 24px !important;
+      border-radius: 4px;
+    }
+
     @media (max-width: 768px) {
       nav { padding: 20px 24px; }
       .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
       section { padding: 80px 24px; }
       #hero { padding: 0 24px; padding-top: 80px; justify-content: flex-start; padding-bottom: 40px; }
       .hero-title-container { flex-direction: column-reverse; align-items: flex-start; gap: 20px; }
@@ -619,6 +754,22 @@
       .contact-grid { grid-template-columns: 1fr; gap: 40px; }
       footer { flex-direction: column; gap: 16px; text-align: center; }
       .floating-whatsapp { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 26px; }
+      .github-stats-grid { grid-template-columns: 1fr; }
+      .gh-streak-wrap { flex-direction: column; align-items: center; }
+      .gh-streak-img { width: 100%; }
+      .contact-method { font-size: 20px; }
+      .hero-desc { font-size: 12px; }
+      .skills-list { grid-template-columns: 1fr; }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      nav { padding: 24px 32px; }
+      section { padding: 100px 32px; }
+      #hero { padding: 0 32px; padding-top: 90px; padding-bottom: 80px; }
+      .about-inner { gap: 48px; }
+      .github-stats-grid { grid-template-columns: repeat(3, 1fr); }
+      .work-grid { grid-template-columns: 1fr 1fr; }
+      .contact-grid { gap: 48px; }
     }
   </style>
 </head>
@@ -646,10 +797,23 @@
     <li><a href="#about">About</a></li>
     <li><a href="#work">Projects</a></li>
     <li><a href="#resume">Timeline</a></li>
+    <li><a href="#github-stats">GitHub</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="https://drive.google.com/file/d/1_92ByaewYfAL2SRjRVQftEn-_eYkgtyP/view?usp=sharing" target="_blank" class="nav-resume-link">Resume ↗</a></li>
   </ul>
+  <button class="nav-hamburger cursor-hover-target" id="hamburgerBtn" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<div class="mobile-nav-drawer" id="mobileDrawer">
+  <a href="#about" class="mobile-nav-link">About</a>
+  <a href="#work" class="mobile-nav-link">Projects</a>
+  <a href="#resume" class="mobile-nav-link">Timeline</a>
+  <a href="#github-stats" class="mobile-nav-link">GitHub</a>
+  <a href="#contact" class="mobile-nav-link">Contact</a>
+  <a href="https://drive.google.com/file/d/1_92ByaewYfAL2SRjRVQftEn-_eYkgtyP/view?usp=sharing" target="_blank" class="nav-resume-link">Resume ↗</a>
+</div>
   
 <section id="hero">
   <div class="hero-eyebrow" id="heroEyebrow">Software Engineer | Mobile Application Developer | Flutter Developer</div>
@@ -911,6 +1075,54 @@
   </div>
 </section>
   
+<section id="github-stats">
+  <div class="section-label">GitHub Activity</div>
+
+  <!-- Live stat counters pulled via GitHub API -->
+  <div class="github-stats-grid">
+    <div class="gh-stat-card reveal cursor-hover-target">
+      <div class="gh-stat-label">Public Repos</div>
+      <div class="gh-stat-value loading" id="ghRepos">···</div>
+      <div class="gh-stat-sub">Open-source projects</div>
+    </div>
+    <div class="gh-stat-card reveal cursor-hover-target">
+      <div class="gh-stat-label">Total Stars</div>
+      <div class="gh-stat-value loading" id="ghStars">···</div>
+      <div class="gh-stat-sub">Stars earned</div>
+    </div>
+    <div class="gh-stat-card reveal cursor-hover-target">
+      <div class="gh-stat-label">Followers</div>
+      <div class="gh-stat-value loading" id="ghFollowers">···</div>
+      <div class="gh-stat-sub">GitHub followers</div>
+    </div>
+  </div>
+
+  <!-- Streak & Stats image cards from github-readme-stats -->
+  <div class="gh-streak-wrap reveal">
+    <img
+      src="https://github-readme-stats.vercel.app/api?username=Monam1083&show_icons=true&theme=dark&hide_border=true&bg_color=0c0c0c&title_color=10B981&icon_color=10B981&text_color=f0ece4&ring_color=10B981"
+      alt="GitHub Stats"
+      class="gh-streak-img"
+      loading="lazy"
+    >
+    <img
+      src="https://streak-stats.demolab.com/?user=Monam1083&theme=dark&hide_border=true&background=0c0c0c&ring=10B981&fire=10B981&currStreakLabel=10B981&sideLabels=888070&dates=888070"
+      alt="GitHub Streak"
+      class="gh-streak-img"
+      loading="lazy"
+    >
+  </div>
+
+  <!-- Top languages -->
+  <div class="gh-langs-row reveal">
+    <div class="gh-lang-pill"><span class="gh-lang-dot" style="background:#00B4D8"></span> Dart</div>
+    <div class="gh-lang-pill"><span class="gh-lang-dot" style="background:#3572A5"></span> Python</div>
+    <div class="gh-lang-pill"><span class="gh-lang-dot" style="background:#e34c26"></span> HTML</div>
+    <div class="gh-lang-pill"><span class="gh-lang-dot" style="background:#f1e05a"></span> JavaScript</div>
+    <div class="gh-lang-pill"><span class="gh-lang-dot" style="background:#563d7c"></span> CSS</div>
+  </div>
+</section>
+
 <section id="contact">
   <div class="contact-bg-text">CONTACT</div>
   <div class="contact-inner">
@@ -1024,7 +1236,59 @@
   }, { threshold: 0.15 });
   reveals.forEach(el => observer.observe(el));
   
-  const contactForm = document.getElementById('contactForm');
+  // ── GitHub Stats via Public API ──
+  async function loadGitHubStats() {
+    try {
+      const res = await fetch('https://api.github.com/users/Monam1083');
+      if (!res.ok) throw new Error('API error');
+      const user = await res.json();
+
+      const reposEl = document.getElementById('ghRepos');
+      const followersEl = document.getElementById('ghFollowers');
+      reposEl.textContent = user.public_repos ?? '—';
+      followersEl.textContent = user.followers ?? '—';
+      reposEl.classList.remove('loading');
+      followersEl.classList.remove('loading');
+
+      // Fetch stars by summing across all repos
+      let page = 1, totalStars = 0;
+      while (true) {
+        const rRes = await fetch(`https://api.github.com/users/Monam1083/repos?per_page=100&page=${page}`);
+        if (!rRes.ok) break;
+        const repos = await rRes.json();
+        if (!repos.length) break;
+        repos.forEach(r => { totalStars += r.stargazers_count; });
+        if (repos.length < 100) break;
+        page++;
+      }
+      const starsEl = document.getElementById('ghStars');
+      starsEl.textContent = totalStars;
+      starsEl.classList.remove('loading');
+    } catch (e) {
+      ['ghRepos','ghStars','ghFollowers'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) { el.textContent = '—'; el.classList.remove('loading'); }
+      });
+    }
+  }
+  loadGitHubStats();
+
+  // ── Hamburger / Mobile Drawer ──
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobileDrawer = document.getElementById('mobileDrawer');
+  hamburgerBtn.addEventListener('click', () => {
+    hamburgerBtn.classList.toggle('open');
+    mobileDrawer.classList.toggle('open');
+    document.body.style.overflow = mobileDrawer.classList.contains('open') ? 'hidden' : '';
+  });
+  document.querySelectorAll('.mobile-nav-link, .mobile-nav-drawer .nav-resume-link').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburgerBtn.classList.remove('open');
+      mobileDrawer.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+
   const submitBtn = document.getElementById('submitBtn');
   contactForm.addEventListener('submit', async function(event) {
     event.preventDefault();
