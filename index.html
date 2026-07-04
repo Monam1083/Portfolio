@@ -689,6 +689,24 @@
     }
     .gh-lang-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); }
 
+    /* ── GitFut Player Card ── */
+    .gh-card-wrap {
+      margin-top: 48px;
+      text-align: center;
+    }
+    .gh-card-credit {
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      margin-top: 12px;
+    }
+    .gh-card-credit a {
+      color: var(--green);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .gh-card-credit a:hover { color: var(--white); }
+
     /* ── Hamburger / Mobile Nav ── */
     .nav-hamburger {
       display: none;
@@ -1143,6 +1161,20 @@
       class="gh-streak-img"
       loading="lazy"
     >
+  </div>
+
+  <!-- GitFut Player Card -->
+  <div class="gh-card-wrap reveal">
+    <img
+      src="gitfut-card.png"
+      alt="Muhammad Monam Majeed GitHub Player Card - GitFut"
+      class="gh-streak-img"
+      style="max-width: 500px;"
+      loading="lazy"
+    >
+    <p class="gh-card-credit">
+      Card generated via <a href="https://gitfut.com/Monam1083" target="_blank">gitfut.com</a>
+    </p>
   </div>
 
   <!-- Top languages -->
