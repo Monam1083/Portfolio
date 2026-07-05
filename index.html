@@ -1298,33 +1298,23 @@
   }, { threshold: 0.15 });
   reveals.forEach(el => observer.observe(el));
   
-  // ── GitHub Stats via Public API ──
+  // ── GitHub Stats via self-hosted static JSON (no rate limits) ──
   async function loadGitHubStats() {
     try {
-      const res = await fetch('https://api.github.com/users/Monam1083');
-      if (!res.ok) throw new Error('API error');
-      const user = await res.json();
+      const res = await fetch('https://raw.githubusercontent.com/Monam1083/github-stats/main/profile/stats.json');
+      if (!res.ok) throw new Error('Stats file not found');
+      const data = await res.json();
 
       const reposEl = document.getElementById('ghRepos');
       const followersEl = document.getElementById('ghFollowers');
-      reposEl.textContent = user.public_repos ?? '—';
-      followersEl.textContent = user.followers ?? '—';
+      const starsEl = document.getElementById('ghStars');
+
+      reposEl.textContent = data.public_repos ?? '—';
+      followersEl.textContent = data.followers ?? '—';
+      starsEl.textContent = data.total_stars ?? '—';
+
       reposEl.classList.remove('loading');
       followersEl.classList.remove('loading');
-
-      // Fetch stars by summing across all repos
-      let page = 1, totalStars = 0;
-      while (true) {
-        const rRes = await fetch(`https://api.github.com/users/Monam1083/repos?per_page=100&page=${page}`);
-        if (!rRes.ok) break;
-        const repos = await rRes.json();
-        if (!repos.length) break;
-        repos.forEach(r => { totalStars += r.stargazers_count; });
-        if (repos.length < 100) break;
-        page++;
-      }
-      const starsEl = document.getElementById('ghStars');
-      starsEl.textContent = totalStars;
       starsEl.classList.remove('loading');
     } catch (e) {
       ['ghRepos','ghStars','ghFollowers'].forEach(id => {
