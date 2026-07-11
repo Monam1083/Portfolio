@@ -657,9 +657,9 @@
     }
     .gh-streak-wrap {
       display: flex;
+      flex-direction: column;
+      align-items: center;
       gap: 24px;
-      flex-wrap: wrap;
-      justify-content: center;
     }
     .gh-streak-img {
       border: 1px solid rgba(240,236,228,0.06);
@@ -1196,7 +1196,7 @@
     </div>
   </div>
 
-  <!-- Streak & Stats image cards -->
+  <!-- Stats, Streak & Top Languages image cards -->
   <div class="gh-streak-wrap reveal">
     <img
       src="https://raw.githubusercontent.com/Monam1083/github-stats/main/profile/stats.svg"
@@ -1212,6 +1212,13 @@
       loading="lazy"
       id="ghStreakImg"
     >
+    <img
+      src="https://raw.githubusercontent.com/Monam1083/github-stats/main/profile/top-langs.svg"
+      alt="Top Languages"
+      class="gh-streak-img"
+      loading="lazy"
+      id="ghLangsImg"
+    >
   </div>
 
   <!-- GitFut Player Card -->
@@ -1224,15 +1231,6 @@
       loading="lazy"
     >
    
-  </div>
-
-  <!-- Top languages -->
-  <div class="gh-langs-row reveal">
-    <div class="gh-lang-pill"><span class="gh-lang-dot" style="background:#00B4D8"></span> Dart</div>
-    <div class="gh-lang-pill"><span class="gh-lang-dot" style="background:#3572A5"></span> Python</div>
-    <div class="gh-lang-pill"><span class="gh-lang-dot" style="background:#e34c26"></span> HTML</div>
-    <div class="gh-lang-pill"><span class="gh-lang-dot" style="background:#f1e05a"></span> JavaScript</div>
-    <div class="gh-lang-pill"><span class="gh-lang-dot" style="background:#563d7c"></span> CSS</div>
   </div>
 </section>
 
