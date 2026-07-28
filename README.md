@@ -38,4 +38,4 @@ This design, layout, and codebase are the original work of **Muhammad Monam Maje
 
 You're welcome to view the source for learning purposes, but reproduction, redistribution, or reuse of this design (including the layout, animations, and visual assets) without written permission is not permitted. See [LICENSE](./LICENSE) for details.
 
-If you'd like to use parts of this project or collaborate, reach out via the contact section on [monam.tech](https://monam.tech) or email muhammadmonammajeed@gmail.com.
+If you'd like to use parts of this project or collaborate, reach out via the contact section on [monam.tech](https://monam.tech) or email monammajeed1083@gmail.com.
