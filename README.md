@@ -1,17 +1,11 @@
 # Muhammad Monam Majeed — Personal Portfolio 🚀
 
 > A highly interactive, design-focused personal portfolio showcasing my journey, technical skills, and featured mobile application projects.
-
 🌐 **Live Website:** https://monam.tech/
-
 [![Portfolio Preview](https://monam.tech/monam.jpeg)](https://monam.tech/)
-
 ## 👨‍💻 About Me
-
 I am a Software Engineering student at Lahore Garrison University and an enthusiastic **Flutter Developer based in Lahore, Pakistan**. I specialize in crafting pixel-perfect, highly performant, and scalable cross-platform mobile applications. I am actively expanding my backend expertise by integrating the MERN stack into my architecture to build complete full-stack solutions.
-
 Currently aiming to contribute to open-source software and participate in the Google Summer of Code (GSoC).
-
 ## ✨ Website Features
 
 This portfolio is built with pure HTML, CSS, and Vanilla JavaScript, prioritizing performance and bespoke animations without the overhead of heavy frameworks.
