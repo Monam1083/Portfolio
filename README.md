@@ -27,16 +27,13 @@ This portfolio is built with pure HTML, CSS, and Vanilla JavaScript, prioritizin
 
 ## 📄 License & Usage
 
-This design, layout, and codebase are the original work of **Muhammad Monam Majeed** ([monam.tech](https://monam.tech)).
+[#-license--usage](#-license--usage)
 
+This design, layout, and codebase are the original work of **Muhammad Monam Majeed** ([monam.tech](https://monam.tech/)).
 © 2026 Muhammad Monam Majeed. All rights reserved.
-## 📄 License
 
-[#-license](#-license)
+The **source code** of this project is licensed under the **MIT License** — feel free to use, learn from, or reference the code and architecture.
 
-The source code of this project is licensed under the **MIT License** — feel free to use, learn from, or reference the code and architecture.
+The **visual design, UI/UX, layout, and branding** of this portfolio are **not** covered under MIT and may not be copied, reproduced, or used to build a similar personal website without permission. You're welcome to view the source for learning purposes, but reuse of the design (including layout, animations, and visual assets) without written permission is not permitted. See [LICENSE](./LICENSE) for full terms.
 
-The **visual design, UI/UX, layout, and branding** of this portfolio are **not** covered under MIT and may not be copied or used to build a similar personal website without permission. See [LICENSE](./LICENSE) for full terms.
-You're welcome to view the source for learning purposes, but reproduction, redistribution, or reuse of this design (including the layout, animations, and visual assets) without written permission is not permitted. See [LICENSE](./LICENSE) for details.
-
-If you'd like to use parts of this project or collaborate, reach out via the contact section on [monam.tech](https://monam.tech) or email monammajeed1083@gmail.com.
+If you'd like to use parts of this project or collaborate, reach out via the contact section on [monam.tech](https://monam.tech/) or email [monammajeed1083@gmail.com](mailto:monammajeed1083@gmail.com).
