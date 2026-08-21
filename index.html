@@ -1270,21 +1270,21 @@
   <!-- Stats, Streak & Top Languages image cards -->
   <div class="gh-streak-wrap reveal">
     <img
-      src="https://cdn.jsdelivr.net/gh/Monam1083/github-stats@main/profile/stats.svg"
+      src="https://raw.githubusercontent.com/Monam1083/github-stats/main/profile/stats.svg"
       alt="GitHub Stats"
       class="gh-streak-img"
       loading="lazy"
       id="ghStatsImg"
     >
     <img
-      src="https://cdn.jsdelivr.net/gh/Monam1083/github-stats@main/profile/streak.svg"
+      src="https://raw.githubusercontent.com/Monam1083/github-stats/main/profile/streak.svg"
       alt="GitHub Streak"
       class="gh-streak-img"
       loading="lazy"
       id="ghStreakImg"
     >
     <img
-      src="https://cdn.jsdelivr.net/gh/Monam1083/github-stats@main/profile/top-langs.svg"
+      src="https://raw.githubusercontent.com/Monam1083/github-stats/main/profile/top-langs.svg"
       alt="Top Languages"
       class="gh-streak-img"
       loading="lazy"
@@ -1322,7 +1322,7 @@
   <!-- 3D Contribution Graph -->
   <div class="gh-card-wrap reveal">
     <img
-      src="https://cdn.jsdelivr.net/gh/Monam1083/github-stats@main/profile-3d-contrib/profile-night-rainbow.svg"
+      src="https://raw.githubusercontent.com/Monam1083/github-stats/main/profile-3d-contrib/profile-night-rainbow.svg"
       alt="Muhammad Monam Majeed GitHub 3D Contribution Graph"
       class="gh-streak-img"
       style="max-width: 900px; width: 100%;"
@@ -1459,7 +1459,7 @@
   // ── GitHub Stats via self-hosted static JSON (no rate limits) ──
   async function loadGitHubStats() {
     try {
-      const res = await fetch('https://cdn.jsdelivr.net/gh/Monam1083/github-stats@main/profile/stats.json');
+      const res = await fetch(`https://raw.githubusercontent.com/Monam1083/github-stats/main/profile/stats.json?v=${Date.now()}`, { cache: 'no-store' });
       if (!res.ok) throw new Error('Stats file not found');
       const data = await res.json();
 
@@ -1481,6 +1481,17 @@
       });
     }
   }
+  // Always request the latest generated SVG cards instead of a cached CDN copy
+  const githubStatsVersion = Date.now();
+  ['ghStatsImg', 'ghStreakImg', 'ghLangsImg', 'gh3DImg'].forEach(id => {
+    const img = document.getElementById(id);
+    if (img) {
+      const url = new URL(img.src);
+      url.searchParams.set('v', githubStatsVersion);
+      img.src = url.toString();
+    }
+  });
+
   loadGitHubStats();
 
   // ── Hamburger / Mobile Drawer ──
